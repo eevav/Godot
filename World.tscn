@@ -1,13 +1,13 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Level.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Elements/tiles.jpeg" type="Texture" id=2]
 [ext_resource path="res://Player.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/Squirrel/Asset 54.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Squirrel/Asset 55.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Squirrel/Asset 56.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Squirrel/Asset 58.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Squirrel/Asset 59.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Squirrel/Asset 55.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Squirrel/Asset 56.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Squirrel/Asset 58.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Squirrel/Asset 59.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Squirrel/Asset 54.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Squirrel/Asset 60.png" type="Texture" id=9]
 [ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=10]
 [ext_resource path="res://SquirrelTileSet.tres" type="TileSet" id=11]
@@ -20,18 +20,21 @@ region = Rect2( 0, 0, 0, 0 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="Theme" id=2]
+
+
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Run",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
@@ -44,7 +47,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 29.1212
@@ -86,6 +89,27 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 5120, 1024 )
 _sections_unfolded = [ "Offset", "Region" ]
 
+[node name="Label" type="Label" parent="ParallaxBackground" index="1"]
+
+modulate = Color( 0.015625, 0.0153198, 0.0153198, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 86.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 2 )
+text = "peanut_count"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "Visibility", "custom_fonts", "custom_styles" ]
+
 [node name="Player" type="KinematicBody2D" parent="." index="1"]
 
 position = Vector2( 224, 480 )
@@ -101,7 +125,7 @@ __meta__ = {
 
 [node name="Sprite" type="AnimatedSprite" parent="Player" index="0"]
 
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "Idle"
 playing = true
 
@@ -109,7 +133,7 @@ playing = true
 
 position = Vector2( 1, -1.31695 )
 scale = Vector2( 1.06452, 1.02133 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
@@ -300,23 +324,5 @@ value = 5
 position = Vector2( 3104, 384 )
 scale = Vector2( 0.5, 0.5 )
 value = 5
-
-[node name="Label" type="Label" parent="." index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 86.0
-margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "peanut_count"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 
