@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Test"
+run/main_scene="res://World.tscn"
+config/icon="res://Sprites/Elements/bg01-1240x1024px.jpg"
+
+[display]
+
+window/size/width=1280
+window/size/height=1024
+window/size/test_width=1000
+window/size/test_height=1024
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

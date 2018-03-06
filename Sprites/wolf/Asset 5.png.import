@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Asset 5.png-a2b543865323aa4d7eedaa2e430b1a48.stex"
+
+[deps]
+
+source_file="res://Sprites/wolf/Asset 5.png"
+source_md5="3e38396cce200485ce680ca9249da694"
+
+dest_files=[ "res://.import/Asset 5.png-a2b543865323aa4d7eedaa2e430b1a48.stex" ]
+dest_md5="e1f61fd787015f7134a163e389fe78d3"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Asset 55.png-4c9c86a163ab4407341cf78c3da51592.stex"
+
+[deps]
+
+source_file="res://Sprites/Squirrel/Asset 55.png"
+source_md5="a36d2e72440e47f20c5d6c0525cc0ddc"
+
+dest_files=[ "res://.import/Asset 55.png-4c9c86a163ab4407341cf78c3da51592.stex" ]
+dest_md5="f836fa166a1b741567d0221d8b7f0b3a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
