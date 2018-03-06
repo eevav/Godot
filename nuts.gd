@@ -3,7 +3,7 @@ extends Node2D
 export var value = 1
 
 func _ready():
-	print(get_owner().get_name())
+
 	if get_owner() != null:
 		get_owner().nuts_total += value
 	
