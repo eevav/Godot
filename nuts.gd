@@ -12,8 +12,6 @@ func _ready():
 
 
 func _collect_peanut( body ):
-	print(get_owner().nuts_collected)
-
 	if get_owner() != null:
 		get_owner().nuts_collected += value
 
