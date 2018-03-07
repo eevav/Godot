@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Asset 10-8.png-9b1706e21dc8e23cf669399b90ac64c8.stex"
+
+[deps]
+
+source_file="res://Sprites/Elements/Asset 10-8.png"
+source_md5="c6f01f2eb7c443cfc85b6ceb17a5fc83"
+
+dest_files=[ "res://.import/Asset 10-8.png-9b1706e21dc8e23cf669399b90ac64c8.stex" ]
+dest_md5="91ecbc4dd42fdde9a2d157bcb4bd917f"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

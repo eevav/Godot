@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bite2.wav-c795868bd14c37358f182971bdb9cde2.sample"
+
+[deps]
+
+source_file="res://sounds/bite2.wav"
+source_md5="73565adb6bf60b3f06d65d2d875b8679"
+
+dest_files=[ "res://.import/bite2.wav-c795868bd14c37358f182971bdb9cde2.sample" ]
+dest_md5="eef40ba8ada6ef5975b9f5214d9b84c0"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

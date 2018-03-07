@@ -1,17 +1,21 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Level.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Elements/tiles.jpeg" type="Texture" id=2]
 [ext_resource path="res://Player.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/Squirrel/Asset 55.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Squirrel/Asset 56.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Squirrel/Asset 58.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Squirrel/Asset 59.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Squirrel/Asset 54.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Squirrel/Asset 54.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Squirrel/Asset 55.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Squirrel/Asset 56.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Squirrel/Asset 58.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Squirrel/Asset 59.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Squirrel/Asset 60.png" type="Texture" id=9]
 [ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=10]
 [ext_resource path="res://SquirrelTileSet.tres" type="TileSet" id=11]
 [ext_resource path="res://nuts.tscn" type="PackedScene" id=12]
+[ext_resource path="res://sounds/yepii1.wav" type="AudioStream" id=13]
+[ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=14]
+[ext_resource path="res://Sprites/Elements/Asset 9-8.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Elements/Asset 10.png" type="Texture" id=16]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -26,15 +30,15 @@ filter_clip = false
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "Run",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
@@ -52,6 +56,16 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 29.1212
 height = 1.8422
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 120, 35 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 120, 35 )
 
 [node name="World" type="Node" index="0"]
 
@@ -180,7 +194,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 655502, 0, 0, 655503, 1, 0, 655504, 1, 0, 655505, 1, 0, 655506, 2, 0, 721038, 6, 0, 721039, 7, 0, 721040, 7, 0, 721041, 7, 0, 721042, 8, 0, 852104, 0, 0, 852105, 1, 0, 852106, 1, 0, 852107, 1, 0, 852108, 2, 0, 917640, 6, 0, 917641, 7, 0, 917642, 7, 0, 917643, 7, 0, 917644, 8, 0, 983131, 2, 0, 983132, 2, 0, 983133, 2, 0, 1048706, 0, 0, 1048707, 1, 0, 1048708, 1, 0, 1048709, 1, 0, 1048710, 2, 0, 1114200, 2, 0, 1114201, 2, 0, 1114202, 2, 0, 1114242, 6, 0, 1114243, 7, 0, 1114244, 7, 0, 1114245, 7, 0, 1114246, 8, 0, 1245206, 0, 0, 1245207, 1, 0, 1245208, 1, 0, 1245209, 1, 0, 1245210, 1, 0, 1245211, 1, 0, 1245212, 1, 0, 1245213, 1, 0, 1245214, 1, 0, 1245215, 2, 0, 1245255, 0, 0, 1245256, 1, 0, 1245257, 1, 0, 1245258, 1, 0, 1245259, 1, 0, 1245260, 1, 0, 1245261, 1, 0, 1245262, 2, 0, 1245269, 2, 0, 1245270, 2, 0, 1245271, 2, 0, 1245307, 0, 0, 1245308, 1, 0, 1245309, 1, 0, 1245310, 1, 0, 1245311, 1, 0, 1245312, 1, 0, 1245313, 1, 0, 1245314, 2, 0, 1310843, 3, 0, 1310844, 4, 0, 1310845, 4, 0, 1310846, 4, 0, 1310847, 4, 0, 1310848, 4, 0, 1310849, 4, 0, 1310850, 5, 0, 1376269, 0, 0, 1376270, 1, 0, 1376271, 1, 0, 1376272, 1, 0, 1376273, 1, 0, 1376274, 1, 0, 1376275, 1, 0, 1376276, 2, 0, 1376289, 0, 0, 1376290, 1, 0, 1376291, 1, 0, 1376292, 1, 0, 1376293, 1, 0, 1376294, 1, 0, 1376295, 1, 0, 1376296, 1, 0, 1376297, 2, 0, 1376319, 0, 0, 1376320, 1, 0, 1376321, 1, 0, 1376322, 1, 0, 1376323, 1, 0, 1376324, 1, 0, 1376325, 2, 0, 1376336, 0, 0, 1376337, 1, 0, 1376338, 1, 0, 1376339, 1, 0, 1376340, 1, 0, 1376341, 2, 0, 1376379, 3, 0, 1376380, 4, 0, 1376381, 4, 0, 1376382, 4, 0, 1376383, 4, 0, 1376384, 4, 0, 1376385, 4, 0, 1376386, 5, 0, 1441912, 0, 0, 1441913, 1, 0, 1441914, 1, 0, 1441915, 1, 0, 1441916, 1, 0, 1441917, 1, 0, 1441918, 2, 0, 1441919, 4, 0, 1441920, 4, 0, 1441921, 4, 0, 1441922, 5, 0, 1507448, 3, 0, 1507449, 4, 0, 1507450, 4, 0, 1507451, 4, 0, 1507452, 4, 0, 1507453, 4, 0, 1507454, 5, 0, 1507455, 4, 0, 1507456, 4, 0, 1507457, 4, 0, 1507458, 5, 0 )
+tile_data = PoolIntArray(  )
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
 "_edit_lock_": true
@@ -216,52 +230,52 @@ __meta__ = {
 
 [node name="peanut" parent="Items" index="0" instance=ExtResource( 12 )]
 
-position = Vector2( 608, 640 )
+position = Vector2( 544, 576 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut2" parent="Items" index="1" instance=ExtResource( 12 )]
 
-position = Vector2( 512, 640 )
+position = Vector2( 480, 576 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut3" parent="Items" index="2" instance=ExtResource( 12 )]
 
-position = Vector2( 736, 576 )
+position = Vector2( 768, 480 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut4" parent="Items" index="3" instance=ExtResource( 12 )]
 
-position = Vector2( 800, 576 )
+position = Vector2( 832, 480 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut5" parent="Items" index="4" instance=ExtResource( 12 )]
 
-position = Vector2( 864, 576 )
+position = Vector2( 896, 480 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut6" parent="Items" index="5" instance=ExtResource( 12 )]
 
-position = Vector2( 928, 576 )
+position = Vector2( 960, 480 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut7" parent="Items" index="6" instance=ExtResource( 12 )]
 
-position = Vector2( 1120, 544 )
+position = Vector2( 608, 576 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut8" parent="Items" index="7" instance=ExtResource( 12 )]
 
-position = Vector2( 1120, 544 )
+position = Vector2( 1088, 576 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut9" parent="Items" index="8" instance=ExtResource( 12 )]
 
-position = Vector2( 1184, 544 )
+position = Vector2( 1152, 576 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="peanut10" parent="Items" index="9" instance=ExtResource( 12 )]
 
-position = Vector2( 1248, 544 )
+position = Vector2( 1216, 576 )
 scale = Vector2( 0.5, 0.5 )
 value = 5
 
@@ -319,10 +333,498 @@ position = Vector2( 3040, 384 )
 scale = Vector2( 0.5, 0.5 )
 value = 5
 
-[node name="peanut20" parent="Items" index="19" instance=ExtResource( 12 )]
+[node name="peanut21" parent="Items" index="19" instance=ExtResource( 12 )]
+
+position = Vector2( 2976, 384 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut20" parent="Items" index="20" instance=ExtResource( 12 )]
 
 position = Vector2( 3104, 384 )
 scale = Vector2( 0.5, 0.5 )
 value = 5
+
+[node name="peanut22" parent="Items" index="21" instance=ExtResource( 12 )]
+
+position = Vector2( 3264, 416 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut23" parent="Items" index="22" instance=ExtResource( 12 )]
+
+position = Vector2( 3328, 448 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut24" parent="Items" index="23" instance=ExtResource( 12 )]
+
+position = Vector2( 3872, 736 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut25" parent="Items" index="24" instance=ExtResource( 12 )]
+
+position = Vector2( 3936, 704 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut26" parent="Items" index="25" instance=ExtResource( 12 )]
+
+position = Vector2( 4000, 704 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut27" parent="Items" index="26" instance=ExtResource( 12 )]
+
+position = Vector2( 4064, 704 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut28" parent="Items" index="27" instance=ExtResource( 12 )]
+
+position = Vector2( 4064, 704 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut29" parent="Items" index="28" instance=ExtResource( 12 )]
+
+position = Vector2( 4544, 576 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut30" parent="Items" index="29" instance=ExtResource( 12 )]
+
+position = Vector2( 4608, 576 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut31" parent="Items" index="30" instance=ExtResource( 12 )]
+
+position = Vector2( 5152, 256 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut32" parent="Items" index="31" instance=ExtResource( 12 )]
+
+position = Vector2( 5216, 256 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut33" parent="Items" index="32" instance=ExtResource( 12 )]
+
+position = Vector2( 5280, 256 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut34" parent="Items" index="33" instance=ExtResource( 12 )]
+
+position = Vector2( 5344, 224 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut35" parent="Items" index="34" instance=ExtResource( 12 )]
+
+position = Vector2( 5408, 192 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut36" parent="Items" index="35" instance=ExtResource( 12 )]
+
+position = Vector2( 5472, 192 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="peanut37" parent="Items" index="36" instance=ExtResource( 12 )]
+
+position = Vector2( 5536, 192 )
+scale = Vector2( 0.5, 0.5 )
+value = 5
+
+[node name="Audio" type="Node2D" parent="." index="6"]
+
+rotation = 0.0180674
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio" index="0"]
+
+stream = ExtResource( 13 )
+volume_db = 0.11
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 14 )
+
+[node name="Platform1" type="Node" parent="." index="7"]
+
+[node name="Sprite" type="Sprite" parent="Platform1" index="0"]
+
+position = Vector2( 544, 669.5 )
+scale = Vector2( 1, 0.932432 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform1/Sprite" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1/Sprite/StaticBody2D" index="0"]
+
+rotation = -0.000872195
+shape = SubResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="Platform1" index="1"]
+
+position = Vector2( 864, 573.5 )
+scale = Vector2( 1, 0.932432 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform1/Sprite2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1/Sprite2/StaticBody2D" index="0"]
+
+rotation = -0.000872195
+shape = SubResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="Platform1" index="2"]
+
+position = Vector2( 1161.96, 670.217 )
+rotation = -0.00232929
+scale = Vector2( 1, 0.932431 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform1/Sprite3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1/Sprite3/StaticBody2D" index="0"]
+
+rotation = -0.000872195
+shape = SubResource( 5 )
+
+[node name="Platform2" type="Node" parent="." index="8"]
+
+[node name="Sprite" type="Sprite" parent="Platform2" index="0"]
+
+position = Vector2( 2048, 704 )
+scale = Vector2( 0.366667, 0.898649 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Platform2" index="1"]
+
+position = Vector2( 2176, 640 )
+scale = Vector2( 0.366667, 0.898649 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite2/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="Platform2" index="2"]
+
+position = Vector2( 2362, 608 )
+scale = Vector2( 0.85, 0.898649 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite3/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite4" type="Sprite" parent="Platform2" index="3"]
+
+position = Vector2( 2592, 640 )
+scale = Vector2( 0.85, 0.898649 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite4/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite5" type="Sprite" parent="Platform2" index="4"]
+
+position = Vector2( 2749, 544 )
+scale = Vector2( 0.291667, 0.898649 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite5/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite6" type="Sprite" parent="Platform2" index="5"]
+
+position = Vector2( 2848, 512 )
+scale = Vector2( 0.291667, 0.898649 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite6/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite7" type="Sprite" parent="Platform2" index="6"]
+
+position = Vector2( 3040, 480 )
+scale = Vector2( 0.945834, 0.898649 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite7" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite7/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite8" type="Sprite" parent="Platform2" index="7"]
+
+position = Vector2( 4576, 704 )
+scale = Vector2( 0.945834, 2.17061 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite8" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite8/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite10" type="Sprite" parent="Platform2" index="8"]
+
+position = Vector2( 4768, 544 )
+scale = Vector2( 0.739585, 1.0853 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite10/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite11" type="Sprite" parent="Platform2" index="9"]
+
+position = Vector2( 4960, 448 )
+scale = Vector2( 0.739585, 1.0853 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite11" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite11/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite12" type="Sprite" parent="Platform2" index="10"]
+
+position = Vector2( 5427.62, 352 )
+scale = Vector2( 2.76979, 1.0853 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite12" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite12/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Sprite9" type="Sprite" parent="Platform2" index="11"]
+
+position = Vector2( 4408.75, 744.156 )
+scale = Vector2( 1.00625, 1.0853 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform2/Sprite9" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Sprite9/StaticBody2D" index="0"]
+
+shape = SubResource( 6 )
+
+[node name="Flowers_asset" type="Node" parent="." index="9"]
+
+[node name="Sprite" type="Sprite" parent="Flowers_asset" index="0"]
+
+position = Vector2( 2368, 736 )
+scale = Vector2( 0.64533, 0.515513 )
+texture = ExtResource( 16 )
+
+[node name="Sprite2" type="Sprite" parent="Flowers_asset" index="1"]
+
+position = Vector2( 2816, 736 )
+scale = Vector2( 0.64533, 0.515513 )
+texture = ExtResource( 16 )
+
+[node name="Sprite3" type="Sprite" parent="Flowers_asset" index="2"]
+
+position = Vector2( 3808, 736 )
+scale = Vector2( 0.64533, 0.515513 )
+texture = ExtResource( 16 )
 
 

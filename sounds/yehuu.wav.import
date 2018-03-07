@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/yehuu.wav-9e5e871caefc8c71100d9da40cfca82b.sample"
+
+[deps]
+
+source_file="res://sounds/yehuu.wav"
+source_md5="ee0bca764be7ca773060b1ffec523737"
+
+dest_files=[ "res://.import/yehuu.wav-9e5e871caefc8c71100d9da40cfca82b.sample" ]
+dest_md5="41d6a6cc5f9f5a9bddcca858878981f9"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
