@@ -19,7 +19,7 @@ config/icon="res://Sprites/Elements/bg01-1240x1024px.jpg"
 window/size/width=1280
 window/size/height=1024
 window/size/test_width=1000
-window/size/test_height=1024
+window/size/test_height=1000
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
